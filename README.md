@@ -1,4 +1,15 @@
 # Bank Loan Default Prediction
+## Key Results
+
+- Final Model: Balanced XGBoost
+- Accuracy: 79.64%
+- Precision: 28.79%
+- Recall: 51.15%
+- F1 Score: 36.85%
+- ROC-AUC: 75.32%
+- Selected Classification Threshold: 0.6
+
+The model was developed to identify customers at higher risk of loan default while giving greater importance to detecting default cases.
 
 ## Project Overview
 
