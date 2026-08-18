@@ -1,129 +1,65 @@
-# Bank Loan Default Prediction
-## Key Results
+# 🏦 Bank Loan Default Prediction
 
-- Final Model: Balanced XGBoost
-- Accuracy: 79.64%
-- Precision: 28.79%
-- Recall: 51.15%
-- F1 Score: 36.85%
-- ROC-AUC: 75.32%
-- Selected Classification Threshold: 0.6
+A machine learning project that predicts whether a loan applicant is likely to default based on financial, credit, employment, and personal information.
 
-The model was developed to identify customers at higher risk of loan default while giving greater importance to detecting default cases.
+The project includes exploratory data analysis, data preprocessing, machine learning model comparison, an XGBoost-based final model, and an interactive Flask web application.
 
-## Project Overview
+---
 
-This project predicts whether a bank loan applicant is likely to default on a loan.
+## 📌 Project Overview
 
-The project uses machine learning classification techniques to analyze customer, financial, employment, and loan-related information.
+Loan default prediction is an important task in banking and financial risk management.
 
-## Dataset
+This project uses historical loan applicant data to identify applicants who may be at higher risk of default.
 
-The dataset contains 255,347 loan records and 18 columns.
+The final machine learning model is integrated into a Flask web application where users can enter applicant information and receive:
+
+- Default prediction
+- Default probability
+- Risk level
+- Model performance insights
+
+---
+
+## 🎯 Project Objectives
+
+- Analyze loan applicant data
+- Perform exploratory data analysis (EDA)
+- Identify important factors associated with loan default
+- Handle categorical variables
+- Train and compare multiple machine learning models
+- Address class imbalance
+- Select a suitable final model
+- Build an interactive loan default prediction web application
+- Present model performance through a dashboard
+
+---
+
+## 📊 Dataset
+
+The dataset contains **255,347 loan records** and **18 original features**.
 
 ### Main Features
 
 - Age
 - Income
-- Loan Amount
-- Credit Score
-- Months Employed
-- Number of Credit Lines
-- Interest Rate
-- Loan Term
-- DTI Ratio
+- LoanAmount
+- CreditScore
+- MonthsEmployed
+- NumCreditLines
+- InterestRate
+- LoanTerm
+- DTIRatio
 - Education
-- Employment Type
-- Marital Status
-- Mortgage Status
-- Dependents
-- Loan Purpose
-- Co-Signer
+- EmploymentType
+- MaritalStatus
+- HasMortgage
+- HasDependents
+- LoanPurpose
+- HasCoSigner
 - Default
 
-## Data Preparation
-
-The dataset was checked for:
-
-- Missing values
-- Duplicate records
-- Data types
-- Numerical distributions
-- Categorical variables
-- Class imbalance
-
-Categorical variables were converted using one-hot encoding.
-
-## Machine Learning Models
-
-The following models were evaluated:
-
-1. Logistic Regression
-2. Random Forest
-3. XGBoost
-4. Balanced XGBoost
-
-## Final Model
-
-The selected model is:
-
-**Balanced XGBoost with a classification threshold of 0.6**
-
-### Final Performance
-
-| Metric | Score |
-|---|---:|
-| Accuracy | 79.64% |
-| Precision | 28.79% |
-| Recall | 51.15% |
-| F1 Score | 36.85% |
-| ROC-AUC | 75.32% |
-
-## Feature Importance
-
-The most important features identified by the final XGBoost model include:
-
-- Age
-- Interest Rate
-- Income
-- Co-Signer
-- Dependents
-- Months Employed
-- Employment Type
-- Loan Amount
-- Mortgage
-- Marital Status
-
-## Project Structure
+The target variable is:
 
 ```text
-Bank_Loan_Default_Prediction/
-│
-├── data/
-│   ├── raw/
-│   └── cleaned/
-│
-├── models/
-│
-├── notebooks/
-│
-├── reports/
-│
-├── src/
-│   └── predict.py
-│
-├── README.md
-└── .gitignore
-## Model Results
-
-### Confusion Matrix
-
-![Confusion Matrix](reports/confusion_matrix.png)
-
-### Feature Importance
-
-![Feature Importance](reports/feature_importance.png)
-
-### Model Comparison
-
-![Model Comparison](reports/model_comparison.png)
+Default
